@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Кейс — интегратор мультимедиа + интернет-магазин (1С-Битрикс) · Измайлов Павел</title>
+<meta name="description" content="SEO-кейс: техническое SEO и структура сайта на 1С-Битрикс. Поисковые визиты 30 → 129 (+330%) за сопоставимые периоды, клики Яндекса 9 → 51.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back" href="index.html">← Все кейсы</a>
+
+  <span class="eyebrow">Кейс · интегратор + интернет-магазин</span>
+  <h1 class="case-title">Структура и техническое SEO сайта на 1С-Битрикс</h1>
+  <div class="case-niche">Интеграция мультимедийного и сценического оборудования · оснащение залов под ключ · сайт услуг + интернет-магазин на 1С-Битрикс</div>
+
+  <div class="projmeta">
+    <div><div class="k">Аудитория</div><div class="v">Бюджетные организации: школы, ДК, вузы, конференц- и актовые залы + коммерческие площадки</div></div>
+    <div><div class="k">Средний чек</div><div class="v">от 1 000 000 ₽</div></div>
+    <div><div class="k">Формат</div><div class="v">Оснащение под ключ · проектные сделки</div></div>
+    <div><div class="k">CMS</div><div class="v">1С-Битрикс · каталог услуг и товаров</div></div>
+  </div>
+
+  <section>
+    <span class="eyebrow">Контекст</span>
+    <p class="lead">Нужно было развить коммерческую структуру услуг и каталога, устранить технические
+    препятствия и настроить измерение обращений. Важно не число страниц, а соответствие спросу,
+    корректные URL и работоспособная аналитика.</p>
+    <p style="margin-top:14px">Проект стартовал с небольшой базы. Счётчику всего несколько месяцев,
+    поэтому основной результат я показываю за сопоставимые окна, а не за длинную историю.</p>
+  </section>
+
+  <section class="narrative">
+    <span class="eyebrow">Как шла работа</span>
+    <p>Проект — интегратор мультимедийного и сценического оборудования, который <strong>оснащает
+    залы под ключ</strong>: сцены, конференц- и актовые залы, переговорные. Клиенты в основном
+    <strong>бюджетные организации</strong> — школы, ДК, вузы, учреждения — плюс коммерческие
+    площадки. Чеки высокие, <strong>от 1 млн ₽</strong>, сделки проектные: решает не один человек,
+    поэтому важны понятная структура услуг, примеры под тип объекта и сайт без технических ошибок.</p>
+
+    <p>Сайт на <strong>1С-Битрикс</strong> уже работал, но структура и техническая часть мешали
+    расти. Я начал с наведения порядка: разложил услуги и каталог по направлениям оборудования и
+    типам объектов, добавил новые разделы услуг и FAQ. Затем взялся за техническую часть:
+    <strong>убрал страницы с ошибкой 404</strong>, <strong>устранил долгую загрузку сайта</strong>
+    и <strong>переписал все мета-теги услуг под коммерческий интент</strong> — с действием
+    (купить / заказать), форматом работ (монтаж под ключ, проект, пусконаладка) и географией.</p>
+
+    <p>Что делал на Битриксе руками и с ИИ: прописал <strong>title и description для 31 услуги</strong>
+    и проверил каждую рендером (31/31); сгруппировал каталог из ~35 верхних разделов примерно в 6
+    групп и настроил <strong>27 редиректов</strong> со старых URL, чтобы не потерять вес; внедрил
+    динамическую микроразметку <strong>JSON-LD</strong> (BreadcrumbList, Service, FAQPage); почистил
+    битые внутренние ссылки и дубли мета; проверил Sitemap, canonical и коды ответа. Технические
+    проблемы находил краулером <strong>Screaming Frog</strong>. Отдельно провёл аудит индексации 41
+    приоритетной страницы: сравнил индекс, доступность и семантический спрос.</p>
+
+    <figure>
+      <div class="metaex">
+        <div class="before">
+          <div class="h">Было</div>
+          <div class="lab">Title</div>
+          <div class="t">Звуковое оборудование для сцены</div>
+          <div class="lab">Description</div>
+          <div class="t">— пусто (типовой автозаголовок Битрикса)</div>
+        </div>
+        <div class="after">
+          <div class="h">Стало</div>
+          <div class="lab">Title</div>
+          <div class="t">Звуковое оборудование для сцены — купить комплект профессиональной акустики с монтажом под ключ</div>
+          <div class="lab">Description</div>
+          <div class="t">Профессиональная акустика для сцены обеспечивает чистый звук на каждом месте зала без «мёртвых зон». Разрабатываем проект и выполняем монтаж с пусконаладкой. Работаем по всей России.</div>
+        </div>
+      </div>
+      <figcaption>Пример по одной из 31 услуги: коммерческий мета-тег с действием, форматом работ и географией</figcaption>
+    </figure>
+
+    <p>Чтобы видеть обращения, настроил и проверил <strong>события аналитики</strong> (контакты,
+    корзина, избранное, оформление заказа) и поднял счётчик в начало <code>head</code>, чтобы он не
+    терял хиты. Технические внедрения организовывал с ИИ-агентами (<strong>Claude Code и OpenAI
+    Codex</strong>) по отдельным инструкциям для мета-тегов и каталога, а данные из проекта агент
+    получал через <strong>MCP</strong>. Результат сверял рендером страниц и данными Вебмастера.</p>
+
+    <p>Итог за сопоставимые окна: поисковые визиты <strong>30 → 129 (+330%)</strong>, показы Яндекса
+    147 → 2 402, клики 9 → 51. База небольшая, поэтому проценты я всегда привожу вместе с
+    абсолютными числами.</p>
+  </section>
+
+  <section>
+    <span class="eyebrow">Что я сделал</span>
+    <ul class="facts">
+      <li>Проработал структуру услуг и каталога под направления оборудования и типы объектов, разместил разделы услуг и FAQ.</li>
+      <li>Написал коммерческие title и description для 31 услуги (действие, формат работ, география) и проверил рендером все 31 страницу.</li>
+      <li>Перестроил каталог: свёл ≈35 верхних разделов примерно в 6 групп и настроил 27 редиректов со старых URL.</li>
+      <li>Внедрил динамическую микроразметку JSON-LD: BreadcrumbList, Service, FAQPage.</li>
+      <li>Убрал страницы с ошибкой 404, исправил битые переходы и дубли мета.</li>
+      <li>Устранил долгую загрузку сайта.</li>
+      <li>Контролировал индексацию: Sitemap, canonical, коды ответа, внутренние ссылки.</li>
+      <li>Провёл аудит индексации 41 приоритетной страницы: сравнил индекс, доступность и семантический спрос.</li>
+      <li>Настроил события аналитики (контакты, корзина, избранное, оформление заказа), проверил их отправку и перенёс счётчик в начало head.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="eyebrow">Результат · сопоставимые 27-дневные окна (1–27 июля → 1–27 августа 2026)</span>
+    <div class="metrics">
+      <div class="metric">
+        <div class="num">+330%</div>
+        <div class="delta">30 → 129</div>
+        <div class="cap">Поисковые визиты</div>
+      </div>
+      <div class="metric">
+        <div class="num">+164,5%</div>
+        <div class="delta">141 → 373</div>
+        <div class="cap">Все визиты сайта</div>
+      </div>
+      <div class="metric">
+        <div class="num">9 → 51</div>
+        <div class="delta">клики Яндекса</div>
+        <div class="cap">За полные месяцы (Вебмастер)</div>
+      </div>
+    </div>
+    <figure style="margin-top:26px">
+      <div class="barchart">
+        <div class="barcol"><div class="bval">30</div><div class="bar prev" style="height:35px"></div></div>
+        <div class="barcol"><div class="bval">129</div><div class="bar" style="height:150px"></div></div>
+      </div>
+      <div class="barlabs"><div>1–27 июля</div><div>1–27 августа</div></div>
+      <figcaption>Поисковые визиты за сопоставимые 27-дневные окна, 2026</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <span class="eyebrow">Динамика по месяцам</span>
+    <figure>
+      <svg class="linechart" viewBox="0 0 660 210" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Поисковые визиты по месяцам, март–август 2026">
+        <line class="grid" x1="40" y1="180" x2="620" y2="180"/>
+        <path class="area" d="M40,180 L40,169.09 L156,156.36 L272,173.64 L388,116.36 L504,142.73 L620,30 L620,180 Z"/>
+        <path class="line" d="M40,169.09 L156,156.36 L272,173.64 L388,116.36 L504,142.73 L620,30"/>
+        <circle class="dot" cx="40" cy="169.09" r="3.5"/>
+        <circle class="dot" cx="156" cy="156.36" r="3.5"/>
+        <circle class="dot" cx="272" cy="173.64" r="3.5"/>
+        <circle class="dot" cx="388" cy="116.36" r="3.5"/>
+        <circle class="dot" cx="504" cy="142.73" r="3.5"/>
+        <circle class="dot" cx="620" cy="30" r="3.5"/>
+        <text class="val" x="40" y="161" text-anchor="middle">12</text>
+        <text class="val" x="156" y="148" text-anchor="middle">26</text>
+        <text class="val" x="272" y="165" text-anchor="middle">7</text>
+        <text class="val" x="388" y="108" text-anchor="middle">70</text>
+        <text class="val" x="504" y="135" text-anchor="middle">41</text>
+        <text class="val" x="620" y="22" text-anchor="middle">165</text>
+        <text class="lbl" x="40" y="200" text-anchor="middle">Март</text>
+        <text class="lbl" x="156" y="200" text-anchor="middle">Апр</text>
+        <text class="lbl" x="272" y="200" text-anchor="middle">Май</text>
+        <text class="lbl" x="388" y="200" text-anchor="middle">Июнь</text>
+        <text class="lbl" x="504" y="200" text-anchor="middle">Июль</text>
+        <text class="lbl" x="620" y="200" text-anchor="middle">Авг</text>
+      </svg>
+      <figcaption>Поисковые визиты сайта по полным месяцам, 2026</figcaption>
+    </figure>
+
+    <figure style="margin-top:30px">
+      <svg class="linechart" viewBox="0 0 660 210" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Все визиты сайта по месяцам 2026">
+        <line class="grid" x1="40" y1="180" x2="620" y2="180"/>
+        <path class="area" d="M40.00,180 L40.00,165.46 L156.00,145.67 L272.00,145.05 L388.00,133.30 L504.00,126.49 L620.00,30.00 L620.00,180 Z"/>
+        <path class="line" d="M40.00,165.46 L156.00,145.67 L272.00,145.05 L388.00,133.30 L504.00,126.49 L620.00,30.00"/>
+        <circle class="dot" cx="40.00" cy="165.46" r="3.2"/><circle class="dot" cx="156.00" cy="145.67" r="3.2"/><circle class="dot" cx="272.00" cy="145.05" r="3.2"/><circle class="dot" cx="388.00" cy="133.30" r="3.2"/><circle class="dot" cx="504.00" cy="126.49" r="3.2"/><circle class="dot" cx="620.00" cy="30.00" r="3.2"/>
+        <text class="val" x="40.00" y="156.46" text-anchor="middle">47</text><text class="val" x="156.00" y="136.67" text-anchor="middle">111</text><text class="val" x="272.00" y="136.05" text-anchor="middle">113</text><text class="val" x="388.00" y="124.30" text-anchor="middle">151</text><text class="val" x="504.00" y="117.49" text-anchor="middle">173</text><text class="val" x="620.00" y="21.00" text-anchor="middle">485</text>
+        <text class="lbl" x="40.00" y="200" text-anchor="middle">Март</text><text class="lbl" x="156.00" y="200" text-anchor="middle">Апр</text><text class="lbl" x="272.00" y="200" text-anchor="middle">Май</text><text class="lbl" x="388.00" y="200" text-anchor="middle">Июнь</text><text class="lbl" x="504.00" y="200" text-anchor="middle">Июль</text><text class="lbl" x="620.00" y="200" text-anchor="middle">Авг</text>
+      </svg>
+      <figcaption>Все визиты сайта по полным месяцам, 2026</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <span class="eyebrow">Независимое подтверждение · Яндекс Вебмастер</span>
+    <table>
+      <thead>
+        <tr><th>Показатель Яндекса</th><th>Июль 2026</th><th>Август 2026</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Показы</td><td>147</td><td class="pos">2 402</td></tr>
+        <tr><td>Клики</td><td>9</td><td class="pos">51</td></tr>
+      </tbody>
+    </table>
+    <figure style="margin-top:24px">
+      <div class="barchart">
+        <div class="barcol"><div class="bval">147</div><div class="bar prev" style="height:9px"></div></div>
+        <div class="barcol"><div class="bval">2 402</div><div class="bar" style="height:150px"></div></div>
+      </div>
+      <div class="barlabs"><div>Июль 2026</div><div>Август 2026</div></div>
+      <figcaption>Показы в Яндексе по данным Вебмастера</figcaption>
+    </figure>
+    <p style="margin-top:12px">Данные Вебмастера не зависят от настроек счётчика Метрики и
+    подтверждают рост видимости в Яндексе. Показы — не посещения; их нельзя складывать с визитами.</p>
+  </section>
+
+  <section>
+    <span class="eyebrow">2026 год · где проект сейчас</span>
+    <p>Счётчик появился в марте 2026 года, поэтому вся история проекта укладывается в 2026 год.
+    В сентябре рост продолжается: показы в Яндексе держатся выше августовских.</p>
+    <div class="metrics" style="margin-top:8px">
+      <div class="metric"><div class="num">423</div><div class="delta">поисковых визита</div><div class="cap">Март–сентябрь 2026, всего</div></div>
+      <div class="metric"><div class="num">102</div><div class="delta">за неполный сентябрь</div><div class="cap">Поисковые визиты</div></div>
+      <div class="metric"><div class="num">2 520</div><div class="delta">показов Яндекса</div><div class="cap">Сентябрь 2026 (Вебмастер)</div></div>
+    </div>
+    <p class="chart-cap" style="margin-top:12px">Данные по 11.09.2026; сентябрь — неполный месяц.</p>
+  </section>
+
+  <section>
+    <span class="eyebrow">Методология и честные ограничения</span>
+    <div class="note">
+      <p>Для основного сравнения я взял 27-дневные окна до того, как перенёс счётчик в конце августа.
+      Так правка аналитики не влияет на цифры.</p>
+      <p>База небольшая, поэтому рядом с процентом я всегда указываю абсолютные значения. Сезонность
+      и внутренние тестовые визиты я до конца не исключил.</p>
+      <p>Сентябрьские технические исправления я включаю в список работ, но в августовский
+      результат их не записываю: данных по ним пока мало.</p>
+    </div>
+  </section>
+
+  <section>
+    <span class="eyebrow">Инструменты</span>
+    <div class="tools">
+      <span>1С-Битрикс</span><span>Техническое SEO</span><span>Screaming Frog</span><span>JSON-LD / Schema.org</span>
+      <span>Редиректы</span><span>Canonical</span><span>Sitemap</span>
+      <span>Яндекс Метрика</span><span>Яндекс Вебмастер</span><span>Настройка целей</span>
+      <span>Claude Code</span><span>OpenAI Codex</span><span>MCP</span>
+    </div>
+  </section>
+
+  <footer class="site-foot">
+    <div><a href="index.html">← Все кейсы</a> · Измайлов Павел · izmailov.frontend@yandex.ru · Telegram @pikenews</div>
+    <div class="disc">Данные Яндекс Метрики и Вебмастера за периоды на странице. Названия компаний не раскрываю.</div>
+  </footer>
+
+</div>
+</body>
+</html>
